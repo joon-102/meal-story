@@ -17,7 +17,11 @@ IG_USERNAME="인스타그램 이메일"
 IG_PASSWORD="인스타그램 비밀번호"
 UPLOAD_TIME="30 7" # 업로드 시간 (분, 시간)
 ```
-3. **실행**
+3. **빌드**
+```
+yarn run build
+```
+4. **실행**
 ```
 yarn start
 ```
