@@ -1,0 +1,52 @@
+{
+  "name": "meal-story",
+  "version": "0.0.1",
+  "description": "오늘의 급식을 인스타 스토리용 이미지로 자동 생성하고 업로드하는 Node.js + TypeScript 프로젝트.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joon-102/meal-story.git"
+  },
+  "keywords": [
+    "meal-story",
+    "school-meal",
+    "korean-school",
+    "meal-api",
+    "image-generation",
+    "instagram-story"
+  ],
+  "author": "김준혁",
+  "license": "CC-BY-NC-4.0",
+  "bugs": {
+    "url": "https://github.com/joon-102/meal-story/issues"
+  },
+  "homepage": "https://github.com/joon-102/meal-story#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/node": "^22.14.0",
+    "@types/node-cron": "^3.0.11",
+    "eslint": "^9.24.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.0.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.0"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "canvas": "^3.1.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "instagram-private-api": "^1.46.1",
+    "node-cron": "^3.0.3"
+  }
+}
