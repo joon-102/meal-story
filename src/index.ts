@@ -12,7 +12,7 @@ async function processAndUploadMealStory() {
 }
 
 (async () => {
-    cron.schedule(`${config} * * *`, () => {
+    cron.schedule(`${config.UPLOAD_TIME} * * *`, () => {
         console.log('🌅 작업 실행!');
         processAndUploadMealStory();
     });
