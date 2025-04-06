@@ -15,6 +15,7 @@ async function loadSession(): Promise<void> {
         console.log('✅ 인스타그램 세션 불러오기 성공');
     } catch {
         console.log('🔐 저장된 세션 없음. 로그인 시도 중...');
+        await ig.account.login(config.IG_USERNAME, config.IG_PASSWORD);
         const serialized = await ig.state.serialize();
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         delete (serialized as any).constants;
