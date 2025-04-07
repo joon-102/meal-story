@@ -1,4 +1,5 @@
 import cron from 'node-cron';
+import { setTimeout } from 'node:timers/promises';
 
 import { config } from './config';
 import { fetchTodayMeal } from './service/meal';
@@ -12,8 +13,9 @@ async function processAndUploadMealStory() {
 }
 
 (async () => {
-    cron.schedule(`${config.UPLOAD_TIME} * * *`, () => {
+    cron.schedule(`${config.UPLOAD_TIME} * * *`, async () => {
+        await setTimeout((Math.floor(Math.random() * (600 - 10 + 1)) + 10) * 1000)
         console.log('🌅 작업 실행!');
-        processAndUploadMealStory();
+        await processAndUploadMealStory();
     });
 })()
